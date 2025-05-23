@@ -1,0 +1,227 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  /* Base Variables */
+  --radius: 0.625rem;
+
+  /* Pastel Green Theme Colors */
+  --pastel-green: #00ff73;
+  --pastel-green-dark: #8bd888;
+  --pastel-green-deep: #7acf6f;
+  --pastel-green-glow: #c3f7c1;
+  --pastel-accent: #d0f0e0;
+
+  /* Background */
+  --background: #f0fff0;
+  --foreground: #324f2f;
+
+  /* Card and popover elements */
+  --card: #ebffe6;
+  --card-foreground: #2f4f4f;
+  --popover: #e6fff5;
+  --popover-foreground: #2f4f4f;
+
+  /* Primary - Main green */
+  --primary: var(--pastel-green);
+  --primary-foreground: #1c2e1b;
+
+  /* Secondary - Darker green */
+  --secondary: var(--pastel-green-dark);
+  --secondary-foreground: #1b2e1b;
+
+  /* Accent - Lighter green with glow */
+  --accent: var(--pastel-green-glow);
+  --accent-foreground: #1b2e2b;
+
+  /* Muted elements */
+  --muted: #d5f5e3;
+  --muted-foreground: #5f7c61;
+
+  /* System colors */
+  --destructive: #e57373;
+  --border: rgba(168, 230, 207, 0.3);
+  --input: rgba(168, 230, 207, 0.3);
+  --ring: var(--pastel-green-deep);
+
+  /* Chart colors - green pastel theme */
+  --chart-1: var(--pastel-green);
+  --chart-2: #b2f2bb;
+  --chart-3: var(--pastel-green-dark);
+  --chart-4: #a5d6a7;
+  --chart-5: #81c784;
+
+  /* Sidebar colors */
+  --sidebar: #e6fff5;
+  --sidebar-foreground: #2f4f4f;
+  --sidebar-primary: var(--pastel-green);
+  --sidebar-primary-foreground: #1b2e2b;
+  --sidebar-accent: var(--pastel-green-dark);
+  --sidebar-accent-foreground: #1b2e2b;
+  --sidebar-border: rgba(168, 230, 207, 0.3);
+  --sidebar-ring: var(--pastel-green-deep);
+
+  /* Custom UI Variables */
+  --cyber-grid-color: rgba(168, 230, 207, 0.08);
+  --cyber-glow-primary: rgba(168, 230, 207, 0.2);
+  --cyber-glow-strong: rgba(168, 230, 207, 0.5);
+  --cyber-line-color: rgba(168, 230, 207, 0.3);
+  --cyber-terminal-bg: rgba(240, 255, 244, 0.7);
+  --cyber-text-bright: #2f4f4f;
+  --cyber-text-muted: rgba(47, 79, 79, 0.7);
+  --cyber-text-dim: rgba(47, 79, 79, 0.5);
+}
+
+.dark {
+  --background: #e6fff5;
+  --foreground: #2f4f4f;
+
+  --card: #d9fce5;
+  --card-foreground: #2f4f4f;
+  --popover: #d9fce5;
+  --popover-foreground: #2f4f4f;
+
+  --primary: var(--pastel-green);
+  --primary-foreground: #1b2e2b;
+
+  --secondary: var(--pastel-green-dark);
+  --secondary-foreground: #1b2e2b;
+
+  --accent: var(--pastel-green-glow);
+  --accent-foreground: #1b2e2b;
+
+  --muted: #d5f5e3;
+  --muted-foreground: #5f7c75;
+
+  --destructive: #e57373;
+  --border: rgba(168, 230, 207, 0.3);
+  --input: rgba(168, 230, 207, 0.3);
+  --ring: var(--pastel-green-deep);
+
+  --chart-1: var(--pastel-green);
+  --chart-2: #b2f2bb;
+  --chart-3: var(--pastel-green-dark);
+  --chart-4: #a5d6a7;
+  --chart-5: #81c784;
+
+  --sidebar: #e6fff5;
+  --sidebar-foreground: #2f4f4f;
+  --sidebar-primary: var(--pastel-green);
+  --sidebar-primary-foreground: #1b2e2b;
+  --sidebar-accent: var(--pastel-green-dark);
+  --sidebar-accent-foreground: #1b2e2b;
+  --sidebar-border: rgba(168, 230, 207, 0.3);
+  --sidebar-ring: var(--pastel-green-deep);
+}
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  /* https://tailwindcss.com/docs/upgrade-guide#buttons-use-the-default-cursor */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@keyframes scanline {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-scanline {
+  animation: scanline 8s linear infinite;
+}
+
+.animate-slow-spin {
+  animation: slow-spin 12s linear infinite;
+}
+
+@keyframes sound-wave {
+  0% {
+    height: 10%;
+  }
+  50% {
+    height: 100%;
+  }
+  100% {
+    height: 10%;
+  }
+}
+
+.animate-sound-wave {
+  animation: sound-wave 1.2s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
